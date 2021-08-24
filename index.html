@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	button{
+		border: 2px dotted violet;
+		font-size: 40px;
+		background-color: lightblue;
+		padding: 10px;
+		margin-top: 10px;
+	}  
+	#demo{
+		color: violet;
+		font-size: 25px;
+		margin-left: 20px;
+	}
+
+body{
+  background-color: white;
+  color:black;
+}
+.toggle{
+  background-color:black;
+  color:white;
+}#ccc{
+	color: lightblue;
+}
+#toggle{
+	color: violet;
+}
+#switch{
+	color: lightblue;
+}
+</style>
+ 	
+</head>
+
+<body>
+	<button onclick="game()">Click to show the game</button><br>
+	<button onclick="showdate()">Click to show the date</button><br>
+	<button onclick='toggle()'>Toggle Mode</button>
+	<p id='thep'></p >
+	<p id='demo'></p >
+	<p id='aaa'></p >
+	<p id='tem'></p >
+	<p id='switch'></p >
+	
+	<p id='toggle'>Nice to meet you!</p >
+	<p id='ccc'></p >
+
+
+	
+	<script>
+	
+
+
+		function toggle(){
+document.body.classList.toggle('toggle');
+}
+
+function change(){
+alert('toggle');
+}
+
+		switch (new Date().getHours()){
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 12:document.getElementById('switch').innerHTML='good morning';
+			  break;
+    	case 13:
+			case 14:
+			case 15:
+			case 16:
+			case 17:
+			case 18:document.getElementById('switch').innerHTML='good afternoon';
+	          break;
+			case 19:
+			case 20:
+			case 21:
+            case 22:
+			case 23:document.getElementById('switch').innerHTML='good evening';
+			   break;
+			}
+
+switch (new Date().getDay()) {
+  case 6:
+    document.getElementById('ccc').innerHTML = "Today is Saturday";
+    break;
+  case 0:
+ document.getElementById('ccc').innerHTML = "Today is Sunday";
+    break;
+  default:
+    document.getElementById('ccc').innerHTML = "Looking forward to the Weekend";
+}
+		function showdate(){
+			document.getElementById('thep').innerHTML=Date()
+		}
+		function gretting(){
+			var a=prompt('what is your name')
+			document.getElementById('demo').innerHTML='hello'+a;
+		}
+		gretting()
+
+		var a=2;
+		var b=5;
+		document.write(a>b);
+
+		function ctof(c){
+	alert((c*9/5)+32); 
+}
+ctof(90);
+		
+
+		function sum(){
+			return 1+2;
+		}
+		var myarray =[1,2,3,4,sum()];
+		alert(myarray[1]+myarray[3]);
+
+
+		var e=(prompt('what is your gender'));
+		if (e=='female') {
+			document.getElementById('demo').innerHTML='hello'+Miss;
+		}
+		else{document.getElementById('demo').innerHTML='hello'+Mr;
+		}
+		
+
+		
+
+function game(){
+var c = parseInt(prompt('guess the number between 0-20'));
+var d=Math.floor(Math.random()*21);
+if(c>d){
+	document.getElementById('aaa').innerHTML ='too big';
+}
+else if (c<d){
+  document.getElementById('aaa').innerHTML ='too small';
+}
+else{document.getElementById('aaa').innerHTML ='good guess!';
+}}
+
+
+</script>
+</body>
+</html>  
